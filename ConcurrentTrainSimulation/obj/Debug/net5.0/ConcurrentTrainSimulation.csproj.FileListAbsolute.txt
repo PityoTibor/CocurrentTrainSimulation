@@ -1,0 +1,16 @@
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\bin\Debug\net5.0\ConcurrentTrainSimulation.exe
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\bin\Debug\net5.0\ConcurrentTrainSimulation.deps.json
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\bin\Debug\net5.0\ConcurrentTrainSimulation.runtimeconfig.json
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\bin\Debug\net5.0\ConcurrentTrainSimulation.runtimeconfig.dev.json
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\bin\Debug\net5.0\ConcurrentTrainSimulation.dll
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\bin\Debug\net5.0\ref\ConcurrentTrainSimulation.dll
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\bin\Debug\net5.0\ConcurrentTrainSimulation.pdb
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\obj\Debug\net5.0\ConcurrentTrainSimulation.csproj.AssemblyReference.cache
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\obj\Debug\net5.0\ConcurrentTrainSimulation.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\obj\Debug\net5.0\ConcurrentTrainSimulation.AssemblyInfoInputs.cache
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\obj\Debug\net5.0\ConcurrentTrainSimulation.AssemblyInfo.cs
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\obj\Debug\net5.0\ConcurrentTrainSimulation.csproj.CoreCompileInputs.cache
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\obj\Debug\net5.0\ConcurrentTrainSimulation.dll
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\obj\Debug\net5.0\ref\ConcurrentTrainSimulation.dll
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\obj\Debug\net5.0\ConcurrentTrainSimulation.pdb
+D:\c#\ConcurrentTrainSimulationProjekt\ConcurrentTrainSimulation\ConcurrentTrainSimulation\obj\Debug\net5.0\ConcurrentTrainSimulation.genruntimeconfig.cache
