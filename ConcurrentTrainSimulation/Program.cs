@@ -10,6 +10,38 @@ namespace ConcurrentTrainSimulation
     {
         static void Main(string[] args)
         {
+
+            Station graph = new Station();
+            graph.InitMatrix(8);
+            graph.ElFelvetel(0, 1);
+            graph.ElFelvetel(0, 4);
+
+            graph.ElFelvetel(1, 0);
+            graph.ElFelvetel(1, 2);
+            graph.ElFelvetel(1, 3);
+
+            graph.ElFelvetel(2, 1);
+            graph.ElFelvetel(2, 3);
+            graph.ElFelvetel(2, 7);
+
+            graph.ElFelvetel(3, 1);
+            graph.ElFelvetel(3, 2);
+
+            graph.ElFelvetel(4, 0);
+            graph.ElFelvetel(4, 5);
+            graph.ElFelvetel(4, 6);
+
+            graph.ElFelvetel(5, 4);
+            graph.ElFelvetel(5, 6);
+
+            graph.ElFelvetel(6, 4);
+            graph.ElFelvetel(6, 5);
+            graph.ElFelvetel(6, 7);
+
+            graph.ElFelvetel(7, 2);
+            graph.ElFelvetel(7, 6);
+
+
             Train t = new Train();
             t.Init();
             new Task(() =>
