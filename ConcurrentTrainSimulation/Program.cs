@@ -41,6 +41,8 @@ namespace ConcurrentTrainSimulation
             graph.ElFelvetel(7, 2);
             graph.ElFelvetel(7, 6);
 
+            graph.ElFelvetel(7, 1   );
+
 
             Train t = new Train();
             t.Init();

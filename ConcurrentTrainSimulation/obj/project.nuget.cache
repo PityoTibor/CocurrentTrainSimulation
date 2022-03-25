@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PP3t4cE4dIHKnC9HsLRHJ957fm7+AoOmOSrDijl03DH5kfQzoxVFmdlOfMmb9NcP8ItfxI41R/qAVlGoS3kvzw==",
+  "dgSpecHash": "KztOL8vzPCk8jZMGf9mUNH83Jkp/7vV3JD6tFpV6PZ6ib1lLijfl23mR6oj/S4d8qhhmGqWXz0FC3EZjDRUysg==",
   "success": true,
-  "projectFilePath": "D:\\c#programozas\\ConcurrentTrain\\CocurrentTrainSimulation\\ConcurrentTrainSimulation\\ConcurrentTrainSimulation.csproj",
+  "projectFilePath": "D:\\c#\\ConcurrentTrainSimulationProjekt\\CocurrentTrainSimulation\\ConcurrentTrainSimulation\\ConcurrentTrainSimulation.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
