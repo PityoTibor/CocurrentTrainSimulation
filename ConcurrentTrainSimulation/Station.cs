@@ -9,15 +9,15 @@ namespace ConcurrentTrainSimulation
     public class Station
     {
 		int indexer = 0;
-		public int[,] matrix;
+		public double[,] matrix;
 		public void InitMatrix(int num)
 		{
-			matrix = new int[num, num];
+			matrix = new double[num, num];
 		}
 
-		public void ElFelvetel(int honnan, int hova)
+		public void ElFelvetel(int honnan, int hova, double weight)
 		{
-			matrix[honnan, hova] = 1;
+			matrix[honnan, hova] = weight;
 		}
 	}
 }
