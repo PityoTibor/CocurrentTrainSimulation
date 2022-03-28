@@ -13,7 +13,10 @@ namespace ConcurrentTrainSimulation
 
             Stations graph = new Stations();
             graph.InitMatrix(8);
-            graph.CreateStations();            
+            graph.CreateStations();
+
+            graph.VisitAllEdge();
+
 
             Queue<double> asd;
 
