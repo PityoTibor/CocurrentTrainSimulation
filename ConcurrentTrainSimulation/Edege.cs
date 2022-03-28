@@ -74,6 +74,7 @@ namespace ConcurrentTrainSimulation
         public int Y { get; set; }
         public double Value { get; set; }
 
+        public int MyProperty { get; set; }
         public Edege(int id, int x, int y, double value)
         {
             Id = id;
