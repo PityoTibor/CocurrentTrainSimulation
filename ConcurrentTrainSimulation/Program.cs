@@ -15,6 +15,22 @@ namespace ConcurrentTrainSimulation
             graph.InitMatrix(8);
             graph.CreateStations();
 
+            for (int i = 0; i < graph.matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < graph.matrix.GetLength(1); j++)
+                {
+                    if (graph.matrix[i,j] != null)
+                    {
+                        Console.Write("X");
+                    }
+                    else
+                    {
+                        Console.Write("0");
+                    }
+                }
+                Console.WriteLine();
+            }
+            ;
             graph.VisitAllEdge();
 
 

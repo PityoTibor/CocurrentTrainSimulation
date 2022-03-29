@@ -30,8 +30,9 @@ namespace ConcurrentTrainSimulation
             AddEdges(new Edge(9, 2, 5, 5.0));
 
             AddEdges(new Edge(10, 3, 0, 2.0));
-            AddEdges(new Edge(11, 3, 5, 3.0));
+            AddEdges(new Edge(10, 3, 1, 2.0));
             AddEdges(new Edge(12, 3, 2, 5.0));
+            AddEdges(new Edge(11, 3, 5, 3.0));
 
             AddEdges(new Edge(13, 4, 0, 4.0));
             AddEdges(new Edge(14, 4, 7, 3.0));
@@ -70,7 +71,6 @@ namespace ConcurrentTrainSimulation
                     }
                 }
             }
-            ;
         }
 
         private List<Edge> Neighbours(Edge e)
@@ -78,11 +78,11 @@ namespace ConcurrentTrainSimulation
             List<Edge> allNeighbour = new List<Edge>();
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                if (matrix[e.X, i] != e && matrix[e.X, i] != null)
+                if (matrix[e.Y, i] != e && matrix[e.Y, i] != null)
                 {
-                    Edge tmp = matrix[e.X, i];
+                    Edge tmp = matrix[e.Y, i];
                     allNeighbour.Add(tmp);
-                    allNeighbour.Add(matrix[tmp.Y, tmp.X]);
+                    //allNeighbour.Add(matrix[tmp.Y, tmp.X]);
                 }
                     
             }
@@ -98,7 +98,7 @@ namespace ConcurrentTrainSimulation
         private Edge GetStartEdge()
         {
             Edge RandomEdge = null;
-            var rnd = new Random().Next(9);
+            var rnd = new Random().Next(8);
 
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
