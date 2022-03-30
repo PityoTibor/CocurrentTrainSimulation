@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace ConcurrentTrainSimulation
 {
     public class Stations
     {
-        int indexer = 0;
+        int nodes = 21;
         public Edge[,] matrix;
         public void InitMatrix(int num)
         {
@@ -30,7 +31,7 @@ namespace ConcurrentTrainSimulation
             AddEdges(new Edge(9, 2, 5, 5.0));
 
             AddEdges(new Edge(10, 3, 0, 2.0));
-            AddEdges(new Edge(10, 3, 1, 2.0));
+            AddEdges(new Edge(11, 3, 1, 2.0));
             AddEdges(new Edge(12, 3, 2, 5.0));
             AddEdges(new Edge(11, 3, 5, 3.0));
 
@@ -46,6 +47,41 @@ namespace ConcurrentTrainSimulation
 
             AddEdges(new Edge(20, 7, 4, 3.0));
             AddEdges(new Edge(21, 7, 6, 2.0));
+        }
+
+        public Dictionary<int, Tuple<double, Edge>> DijsktraShortestRoute()
+        {
+            Dictionary<int, Tuple<double, Edge>> re = new Dictionary<int, Tuple<double, Edge>>();
+
+            Queue<Tuple<Edge, int>> S = new Queue<Tuple<Edge, int>>();
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if (matrix[i,j] != null)
+                    {
+                        S.Enqueue(new Tuple<Edge, int>(matrix[i,j], int.MaxValue));
+                    }
+                }
+            }
+            ;
+
+            for (int i = 0; i < nodes; i++)
+            {
+                re.Add(i+1, new Tuple<double, Edge>(double.NaN, null));
+            }
+            ;
+
+            Edge start = GetStartEdge();
+            re.Add(start.Id, new Tuple<double, Edge>(0, null));
+
+            GetMinValue(S);
+            while (S.Count != 0)
+            {
+
+            }
+
+            return re;
         }
 
         public void VisitAllEdge()
@@ -72,6 +108,13 @@ namespace ConcurrentTrainSimulation
                 }
             }
         }
+
+        private void GetMinValue(Queue<Tuple<Edge, int>> S)
+        {
+            var asd = S.Select(x => x.Item2).Min();
+            ;
+        }
+
 
         private List<Edge> Neighbours(Edge e)
         {

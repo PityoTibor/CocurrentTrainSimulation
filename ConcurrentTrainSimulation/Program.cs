@@ -30,13 +30,9 @@ namespace ConcurrentTrainSimulation
                 }
                 Console.WriteLine();
             }
-            ;
-            graph.VisitAllEdge();
 
+            graph.DijsktraShortestRoute();
 
-            Queue<double> asd;
-
-            ;
 
             Train t = new Train();
             t.Init();
