@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConcurrentTrainSimulation
 {
+
     public class Stations
     {
         int nodes = 22;
@@ -50,6 +51,12 @@ namespace ConcurrentTrainSimulation
             AddEdges(new Edge(21, 7, 6, 2.0));
         }
 
+        public void DijsktraShortestRoute2()
+        {
+            Dictionary<string, double> L = new Dictionary<string, double>();
+            Dictionary<string, double> E = new Dictionary<string, double>();
+        }
+
         public Dictionary<int, Tuple<double, Edge, List<Edge>>> DijsktraShortestRoute()
         {
             Dictionary<int, Tuple<double, Edge, List<Edge>>> LE = new Dictionary<int, Tuple<double, Edge, List<Edge>>>();
@@ -72,7 +79,7 @@ namespace ConcurrentTrainSimulation
             }
             
             Edge start = GetStartEdge();
-            LE[start.Id] = new Tuple<double, Edge, List<Edge>>(0, null, new List<Edge>());
+            LE[start.Id] = new Tuple<double, Edge, List<Edge>>(0, start, new List<Edge>());
             S[start.Id] = new Tuple<Edge, double>(start, 0);
             
             while (S.Count != 0)
@@ -83,8 +90,12 @@ namespace ConcurrentTrainSimulation
                 {
                     Edge aktualNeighbour = allNeighbour[i];
 
-                    int uId = SearchEdge(LE, u);
-                    int aktualNeighbourId = SearchEdge(LE, aktualNeighbour);
+                    //int uId = SearchEdge(LE, u);
+                    //UpdateLE(LE, aktualNeighbourId);
+                    //int aktualNeighbourId = SearchEdge(LE, aktualNeighbour);
+
+                    //UpdateLE(LE, uId);
+                   
 
                     if (LE[u.Id].Item1 + aktualNeighbour.Value < LE[aktualNeighbour.Id].Item1)
                     {
@@ -131,6 +142,21 @@ namespace ConcurrentTrainSimulation
             }
         }
 
+        private void UpdateLE(Dictionary<int, Tuple<double, Edge, List<Edge>>> LE, int e)
+        {
+            int counter = 0;
+            foreach (var item in LE)
+            {
+                if (item.Key == e)
+                {
+                    var Value = item.Value.Item1;
+                    var Neighbours = item.Value.Item3;
+                    LE[counter] = new Tuple<double, Edge, List<Edge>>(Value, LE[e].Item2, Neighbours);
+                }
+                counter++;
+            }
+        }
+
         private int SearchEdge(Dictionary<int, Tuple<double, Edge, List<Edge>>> LE, Edge e)
         {
             for (int i = 0; i < LE.Count; i++)
@@ -152,6 +178,7 @@ namespace ConcurrentTrainSimulation
                 if (queue.Item2 < min)
                 {
                     e = queue.Item1;
+                    min = queue.Item2;
                     //itt ki is lehet törölni
                 }
             }
