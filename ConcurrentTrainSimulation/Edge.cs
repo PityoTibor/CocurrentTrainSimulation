@@ -18,6 +18,22 @@ namespace ConcurrentTrainSimulation
             matrix = new Edge[num, num];
         }
 
+
+        void asd()
+        {
+            int[][] adjacencyMatrix2 = new int[][]
+            {
+                    new int[] { 0, 1, 0, 2, 4, 0, 0, 0 },
+                    new int[] { 1, 0, 9, 2, 0, 0, 0, 0 },
+                    new int[] { 0, 9, 0, 5, 0, 5, 0, 0 },
+                    new int[] { 2, 2, 5, 0, 3, 0, 0, 0 },
+                    new int[] { 4, 0, 0, 0, 0, 0, 0, 3 },
+                    new int[] { 0, 0, 1, 3, 0, 0, 3, 0 },
+                    new int[] { 0, 0, 0, 0, 0, 3, 0, 2 },
+                    new int[] { 0, 0, 0, 3, 0, 0, 0, 2 }
+            };
+        }
+
         public void CreateStations()
         {
             AddEdges(new Edge(0, 0, 1, 1.0));
