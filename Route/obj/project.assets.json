@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "ConcurrentTrainSimulation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ConcurrentTrainSimulation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConcurrentTrainSimulation.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ConcurrentTrainSimulation/1.0.0": {
+      "type": "project",
+      "path": "../ConcurrentTrainSimulation/ConcurrentTrainSimulation.csproj",
+      "msbuildProject": "../ConcurrentTrainSimulation/ConcurrentTrainSimulation.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "ConcurrentTrainSimulation >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\admin\\.nuget\\packages\\": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\c#programozas\\ConcurrentTrain\\CocurrentTrainSimulation\\ConcurrentTrainSimulation\\ConcurrentTrainSimulation.csproj",
-      "projectName": "ConcurrentTrainSimulation",
-      "projectPath": "D:\\c#programozas\\ConcurrentTrain\\CocurrentTrainSimulation\\ConcurrentTrainSimulation\\ConcurrentTrainSimulation.csproj",
+      "projectUniqueName": "D:\\c#programozas\\ConcurrentTrain\\CocurrentTrainSimulation\\Route\\Route.csproj",
+      "projectName": "Route",
+      "projectPath": "D:\\c#programozas\\ConcurrentTrain\\CocurrentTrainSimulation\\Route\\Route.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\c#programozas\\ConcurrentTrain\\CocurrentTrainSimulation\\ConcurrentTrainSimulation\\obj\\",
+      "outputPath": "D:\\c#programozas\\ConcurrentTrain\\CocurrentTrainSimulation\\Route\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\c#programozas\\ConcurrentTrain\\CocurrentTrainSimulation\\ConcurrentTrainSimulation\\ConcurrentTrainSimulation.csproj": {
+              "projectPath": "D:\\c#programozas\\ConcurrentTrain\\CocurrentTrainSimulation\\ConcurrentTrainSimulation\\ConcurrentTrainSimulation.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
