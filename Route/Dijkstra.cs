@@ -12,7 +12,7 @@ namespace Route
         public static void DijsktraShortestRoute(int[][] adjacencyMatrix, int numberOfVertex, int[] distance, int[] parent)
         {
             PriorityQueue<int> vertexQueue = new PriorityQueue<int>(true);
-
+            //adding all vertex to priority queue
             for (int i = 0; i < numberOfVertex; i++)
                 vertexQueue.Enqueue(distance[i], i); // priority = distance, object = vertex
 
@@ -31,31 +31,32 @@ namespace Route
                     }
                 }
             }
+            ;
         }
 
-        public static void DijsktraShortestRoute2(Edge[][] adjacencyMatrix, int numberOfVertex, int[] distance, int[] parent)
-        {
-            PriorityQueue<int> vertexQueue = new PriorityQueue<int>(true);
+        //public static void DijsktraShortestRoute2(Station[][] adjacencyMatrix, int numberOfVertex, int[] distance, int[] parent)
+        //{
+        //    PriorityQueue<int> vertexQueue = new PriorityQueue<int>(true);
 
-            for (int i = 0; i < numberOfVertex; i++)
-                vertexQueue.Enqueue(distance[i], i); // priority = distance, object = vertex
+        //    for (int i = 0; i < numberOfVertex; i++)
+        //        vertexQueue.Enqueue(distance[i], i); // priority = distance, object = vertex
 
-            //treversing to all vertices
-            while (vertexQueue.Count > 0)
-            {
-                var u = vertexQueue.Dequeue(); // vertax with least distance
-                                               //Traversing to all connecting edges
-                for (int v = 0; v < adjacencyMatrix[u].Length; v++)
-                {
-                    if (adjacencyMatrix[u][v] > 0)
-                    {
-                        Relax(u, v, adjacencyMatrix[u][v], distance, parent);
-                        //updating priority value since distance is changed
-                        vertexQueue.UpdatePriority(v, distance[v]);
-                    }
-                }
-            }
-        }
+        //    //treversing to all vertices
+        //    while (vertexQueue.Count > 0)
+        //    {
+        //        var u = vertexQueue.Dequeue(); // vertax with least distance
+        //                                       //Traversing to all connecting edges
+        //        for (int v = 0; v < adjacencyMatrix[u].Length; v++)
+        //        {
+        //            if (adjacencyMatrix[u][v] > 0)
+        //            {
+        //                Relax(u, v, adjacencyMatrix[u][v], distance, parent);
+        //                //updating priority value since distance is changed
+        //                vertexQueue.UpdatePriority(v, distance[v]);
+        //            }
+        //        }
+        //    }
+        //}
 
         static void Relax(int u, int v, int weight, int[] distance, int[] parent)
         {

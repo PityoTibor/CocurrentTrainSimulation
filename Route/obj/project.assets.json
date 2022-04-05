@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
-      "ConcurrentTrainSimulation/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/ConcurrentTrainSimulation.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ConcurrentTrainSimulation.dll": {}
-        }
-      }
-    }
+    "net5.0": {}
   },
-  "libraries": {
-    "ConcurrentTrainSimulation/1.0.0": {
-      "type": "project",
-      "path": "../ConcurrentTrainSimulation/ConcurrentTrainSimulation.csproj",
-      "msbuildProject": "../ConcurrentTrainSimulation/ConcurrentTrainSimulation.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0": [
-      "ConcurrentTrainSimulation >= 1.0.0"
-    ]
+    "net5.0": []
   },
   "packageFolders": {
     "C:\\Users\\admin\\.nuget\\packages\\": {}
@@ -52,11 +33,7 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {
-            "D:\\c#programozas\\ConcurrentTrain\\CocurrentTrainSimulation\\ConcurrentTrainSimulation\\ConcurrentTrainSimulation.csproj": {
-              "projectPath": "D:\\c#programozas\\ConcurrentTrain\\CocurrentTrainSimulation\\ConcurrentTrainSimulation\\ConcurrentTrainSimulation.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

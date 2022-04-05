@@ -7,27 +7,14 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "Route/1.0.0": {
-        "dependencies": {
-          "ConcurrentTrainSimulation": "1.0.0"
-        },
         "runtime": {
           "Route.dll": {}
-        }
-      },
-      "ConcurrentTrainSimulation/1.0.0": {
-        "runtime": {
-          "ConcurrentTrainSimulation.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Route/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ConcurrentTrainSimulation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
