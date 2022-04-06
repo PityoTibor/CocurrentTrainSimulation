@@ -10,3 +10,15 @@ D:\c#programozas\ConcurrentTrain\CocurrentTrainSimulation\Route\bin\Debug\net5.0
 D:\c#programozas\ConcurrentTrain\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.dll
 D:\c#programozas\ConcurrentTrain\CocurrentTrainSimulation\Route\obj\Debug\net5.0\ref\Route.dll
 D:\c#programozas\ConcurrentTrain\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.pdb
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\bin\Debug\net5.0\Route.deps.json
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\bin\Debug\net5.0\Route.dll
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\bin\Debug\net5.0\ref\Route.dll
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\bin\Debug\net5.0\Route.pdb
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.csproj.AssemblyReference.cache
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.AssemblyInfoInputs.cache
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.AssemblyInfo.cs
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.csproj.CoreCompileInputs.cache
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.dll
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\obj\Debug\net5.0\ref\Route.dll
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.pdb

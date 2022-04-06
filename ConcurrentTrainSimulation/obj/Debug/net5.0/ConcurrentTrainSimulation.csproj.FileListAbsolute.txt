@@ -65,3 +65,6 @@ D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\CocurrentTrainSi
 D:\c#programozas\ConcurrentTrain\CocurrentTrainSimulation\ConcurrentTrainSimulation\bin\Debug\net5.0\Route.dll
 D:\c#programozas\ConcurrentTrain\CocurrentTrainSimulation\ConcurrentTrainSimulation\bin\Debug\net5.0\Route.pdb
 D:\c#programozas\ConcurrentTrain\CocurrentTrainSimulation\ConcurrentTrainSimulation\obj\Debug\net5.0\ConcurrentTrainSimulation.csproj.CopyComplete
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\ConcurrentTrainSimulation\bin\Debug\net5.0\Route.dll
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\ConcurrentTrainSimulation\bin\Debug\net5.0\Route.pdb
+D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\ConcurrentTrainSimulation\obj\Debug\net5.0\ConcurrentTrainSimulation.csproj.CopyComplete
