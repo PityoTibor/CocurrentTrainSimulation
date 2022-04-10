@@ -13,7 +13,8 @@
             {
                 Train t = new Train();
                 t.Init();
-                
+                TrafficManager m = new TrafficManager();
+                m.FillMap();
                 Console.ReadKey();
             }
         }
