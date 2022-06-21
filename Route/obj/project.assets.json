@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Pityó Tibor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\c#programozas\\ConcurrentTrain\\CocurrentTrainSimulation\\Route\\Route.csproj",
+      "projectUniqueName": "D:\\c#\\ConcurrentTrainSimulationProjekt\\CocurrentTrainSimulation\\Route\\Route.csproj",
       "projectName": "Route",
-      "projectPath": "D:\\c#programozas\\ConcurrentTrain\\CocurrentTrainSimulation\\Route\\Route.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\c#programozas\\ConcurrentTrain\\CocurrentTrainSimulation\\Route\\obj\\",
+      "projectPath": "D:\\c#\\ConcurrentTrainSimulationProjekt\\CocurrentTrainSimulation\\Route\\Route.csproj",
+      "packagesPath": "C:\\Users\\Pityó Tibor\\.nuget\\packages\\",
+      "outputPath": "D:\\c#\\ConcurrentTrainSimulationProjekt\\CocurrentTrainSimulation\\Route\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Pityó Tibor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.212\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

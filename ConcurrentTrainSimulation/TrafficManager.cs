@@ -1,4 +1,5 @@
 ﻿using Route;
+using Route.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,27 @@ namespace ConcurrentTrainSimulation
 {
     public class TrafficManager
     {
-        internal class ShortestLineMap
+        static int number = 1;
+        public class ShortestLineMapDiksktra
         {
             public int[] distance { get; set; }
             public int[] parent { get; set; }
         }
 
-        ShortestLineMap Map { get; set; } = new ShortestLineMap();
+        public class ShortestLineMapFloyd_Warshal
+        {
+            public List<Road> roads;
+            public ShortestLineMapFloyd_Warshal()
+            {
+                this.roads = new List<Road>();
+            }
+        }
 
-        public void FillMap()
+        public ShortestLineMapDiksktra Map_Dijsktra { get; set; } = new ShortestLineMapDiksktra();
+        public ShortestLineMapFloyd_Warshal Map_FloydWarshall { get; set; }
+
+        public int id { get; set; } = number++;
+        public void GetAllShortestPath()
         {
             //int[][] adjacencyMatrix = new int[][]
             //{
@@ -43,33 +56,50 @@ namespace ConcurrentTrainSimulation
             //         { 0, 0, 0, 3, 0, 0, 0, 2 }
             //};
 
-            int[,] weights = { { 0, 1, 0, 2, 4, 0, 0, 0 }, { 1, 0, 9, 2, 0, 0, 0, 0 }, { 0, 9, 0, 5, 0, 5, 0, 0 }, { 2, 2, 5, 0, 3, 0, 0, 0 }, { 4, 0, 0, 0, 0, 0, 0, 3 }, { 0, 0, 1, 3, 0, 0, 3, 0 }, { 0, 0, 0, 0, 0, 3, 0, 2 }, { 0, 0, 0, 3, 0, 0, 0, 2 } };
-            int[,] weights2 = { { 1, 3, -2 }, { 2, 1, 4 }, { 2, 3, 3 }, { 3, 4, 2 }, { 4, 2, -1 } };
+            int[,] adjacencyMatrix =
+            {
+                { 1, 2, 1}, {2, 1, 1 },
+                { 1, 4, 2}, {4, 1, 2 },
+                { 1, 5, 4}, {5, 1, 4 },
 
+                { 2, 3, 9}, {3, 2, 9 },
+                { 2, 4, 2}, {4, 2, 2 },
+
+                { 3, 4, 5}, {4, 3, 5 },
+                { 3, 6, 1}, {6, 3, 1 },
+
+                { 4, 6, 3}, {6, 4, 3 },
+
+                { 5, 8, 3}, {8, 5, 3 },
+
+                { 6, 7, 3}, {7, 6, 3 },
+
+                { 7, 8, 2}, {8, 7, 2 },
+
+            };
+
+            Map_FloydWarshall = new ShortestLineMapFloyd_Warshal();
             int numVerticies = 8;
-
-            Floyd_Warshall.FloydWarshall(weights2, numVerticies);
-            ;
+            Map_FloydWarshall.roads = Floyd_Warshall.FloydWarshall(adjacencyMatrix, numVerticies);
 
             //int numberOfVertex = adjacencyMatrix[0].Length;
             //Map.distance = Enumerable.Repeat(int.MaxValue, numberOfVertex).ToArray();
             //Map.parent = Enumerable.Repeat(-1, numberOfVertex).ToArray();
             //Map.distance[0] = 0;
             //Dijkstra.DijsktraShortestRoute(adjacencyMatrix, numberOfVertex, Map.distance, Map.parent);
-
-
-
         }
 
-        private Dictionary<int, Tuple<int, int>> CreateMapRoute()
+        private Dictionary<int, Tuple<int, int>> CreateMapRouteDijsktra()
         {
             Dictionary<int, Tuple<int, int>> tmp = new Dictionary<int, Tuple<int, int>>();
-            for (int i = 0; i < Map.distance.Length; i++)
+            for (int i = 0; i < Map_Dijsktra.distance.Length; i++)
             {
-                tmp.Add(i, new Tuple<int, int>(Map.distance[i], Map.parent[i]));
+                tmp.Add(i, new Tuple<int, int>(Map_Dijsktra.distance[i], Map_Dijsktra.parent[i]));
             }
 
             return tmp;
         }
+
+
     }
 }
