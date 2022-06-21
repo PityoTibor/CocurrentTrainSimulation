@@ -65,6 +65,38 @@ namespace Route
             return tmp;
         }
 
+        //private static List<Road> GetResult(double[,] dist, int[,] next)
+        //{
+        //    List<Road> r = new List<Road>();
+        //    for (int i = 0; i < next.GetLength(0); i++)
+        //    {
+        //        for (int j = 0; j < next.GetLength(1); j++)
+        //        {
+        //            List<Paths> Path = new List<Paths>();
+        //            Road road = new Road();
+        //            if (i != j)
+        //            {
+        //                int u = i + 1;
+        //                int v = j + 1;
+
+        //                road.U = u;
+        //                road.V = v;
+        //                road.Dest = (int)dist[i, j];
+        //                Path.Add(u);
+        //                do
+        //                {
+        //                    u = next[u - 1, v - 1];
+        //                    Path.Add(u);
+        //                } while (u != v);
+        //                road.Path = Path;
+        //                r.Add(road);
+        //            }
+        //        }
+        //    }
+        //    ;
+        //    return r;
+        //}
+
         private static List<Road> GetResult(double[,] dist, int[,] next)
         {
             List<Road> r = new List<Road>();
@@ -72,7 +104,7 @@ namespace Route
             {
                 for (int j = 0; j < next.GetLength(1); j++)
                 {
-                    List<int> Path = new List<int>();
+                    List<Paths> Path = new List<Paths>();
                     Road road = new Road();
                     if (i != j)
                     {
@@ -82,11 +114,11 @@ namespace Route
                         road.U = u;
                         road.V = v;
                         road.Dest = (int)dist[i, j];
-                        Path.Add(u);
+                        Path.Add(new Paths() { Path = u });
                         do
                         {
                             u = next[u - 1, v - 1];
-                            Path.Add(u);
+                            Path.Add(new Paths() {Path = u });
                         } while (u != v);
                         road.Path = Path;
                         r.Add(road);

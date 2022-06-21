@@ -11,7 +11,7 @@ namespace Route.Utils
         public int U { get; set; }
         public int V { get; set; }
         public int Dest { get; set; }
-        public List<int> Path { get; set; }
+        public List<Paths> Path { get; set; }
         public object LockObj { get; set; }
         public bool U_IsBusy { get; set; }
         public bool V_IsBusy { get; set; }
@@ -23,8 +23,10 @@ namespace Route.Utils
     }
 
 
-    class Paths
+    public class Paths
     {
         public int Path { get; set; }
+        public bool IsBusy { get; set; } = false;
+        public object LockObj { get; set; } = new object();
     }
 }

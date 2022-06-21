@@ -14,17 +14,25 @@
                 TrafficManager manager = new TrafficManager();
                 manager.GetAllShortestPath();
                 var a = manager.Map_FloydWarshall;
-    
-                Train t = new Train(manager.Map_FloydWarshall);
-                t.Init();
-                t.OnTheGo();
+            ;
+
+                
+                var trains = Enumerable.Range(0, 2).Select(x => new Train(manager.Map_FloydWarshall)).ToList();
+                trains.ForEach(x => x.Init());
+
+                foreach (var item in trains)
+                {
+                    foreach (var i in item.Timetable)
+                    {
+                        Console.WriteLine(i.Item1 + " " + i.Item2);
+                    }
+                }
 
             ;
-                Train t2 = new Train(manager.Map_FloydWarshall);
-                t2.Init();
-                t2.OnTheGo();
-
-            Console.ReadKey();
+                trains.Select(x => new Task(() => x.OnTheGo(), TaskCreationOptions.LongRunning)).ToList()
+                .ForEach(x => x.Start());
+           
+                Console.ReadLine();
             }
         }
     }

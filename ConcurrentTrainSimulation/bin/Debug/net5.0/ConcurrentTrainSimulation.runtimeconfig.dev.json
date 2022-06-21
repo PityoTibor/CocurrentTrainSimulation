@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Pityó Tibor\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Pityó Tibor\\.nuget\\packages"
+      "C:\\Users\\ext-pityot\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ext-pityot\\.nuget\\packages"
     ]
   }
 }

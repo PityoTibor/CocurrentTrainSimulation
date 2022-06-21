@@ -22,3 +22,15 @@ D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\obj\Debug\
 D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.dll
 D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\obj\Debug\net5.0\ref\Route.dll
 D:\c#\ConcurrentTrainSimulationProjekt\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.pdb
+C:\Users\ext-pityot\Documents\Train_0621\CocurrentTrainSimulation\Route\bin\Debug\net5.0\Route.deps.json
+C:\Users\ext-pityot\Documents\Train_0621\CocurrentTrainSimulation\Route\bin\Debug\net5.0\Route.dll
+C:\Users\ext-pityot\Documents\Train_0621\CocurrentTrainSimulation\Route\bin\Debug\net5.0\Route.pdb
+C:\Users\ext-pityot\Documents\Train_0621\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.csproj.AssemblyReference.cache
+C:\Users\ext-pityot\Documents\Train_0621\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ext-pityot\Documents\Train_0621\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.AssemblyInfoInputs.cache
+C:\Users\ext-pityot\Documents\Train_0621\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.AssemblyInfo.cs
+C:\Users\ext-pityot\Documents\Train_0621\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.csproj.CoreCompileInputs.cache
+C:\Users\ext-pityot\Documents\Train_0621\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.dll
+C:\Users\ext-pityot\Documents\Train_0621\CocurrentTrainSimulation\Route\obj\Debug\net5.0\refint\Route.dll
+C:\Users\ext-pityot\Documents\Train_0621\CocurrentTrainSimulation\Route\obj\Debug\net5.0\Route.pdb
+C:\Users\ext-pityot\Documents\Train_0621\CocurrentTrainSimulation\Route\obj\Debug\net5.0\ref\Route.dll
