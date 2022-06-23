@@ -8,13 +8,6 @@ namespace ConcurrentTrainSimulation.Material
 {
     class Gold : RawMaterial
     {
-        static Random rnd = new Random();
-        public int Value { get; private set; }
-        public Gold()
-        {
-            Value = rnd.Next(20, 46);
-        }
-
-        
+        public int Value { get; private set; } = 120;
     }
 }

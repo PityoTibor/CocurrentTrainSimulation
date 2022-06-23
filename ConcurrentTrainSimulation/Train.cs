@@ -11,14 +11,14 @@ using static ConcurrentTrainSimulation.TrafficManager;
 
 namespace ConcurrentTrainSimulation
 {
-    public enum Phases {Init, P, Start, OnTheRoad, OnPurpose, End }
+    public enum Phases { Init, P, Start, OnTheRoad, packed, OnPurpose, End }
     public class Train
     {
         static Random rnd = new Random();
         static int TrainId = 0;
         object lockobj = new object();
 
-        List<ConcurrentStack<int>> fittings;
+        List<ConcurrentStack<Fitting>> fittings;
         public List<Tuple<int, int>> Timetable;
         ShortestLineMapFloyd_Warshal FloydWarshall;
 
@@ -28,7 +28,7 @@ namespace ConcurrentTrainSimulation
         public string Id { get; set; } = "#" + ++TrainId;
         public Train(ShortestLineMapFloyd_Warshal FloydWarshall)
         {
-            fittings = new List<ConcurrentStack<int>>();
+            fittings = new List<ConcurrentStack<Fitting>>();
             Timetable = new List<Tuple<int, int>>();
             this.FloydWarshall = FloydWarshall;
         }
@@ -40,7 +40,7 @@ namespace ConcurrentTrainSimulation
             Phase = Phases.Init;
         }
 
-        public void OnTheGo()
+        public void OnTheGo(List<Packer> packers)
         {
             for (int i = 0; i < Timetable.Count; i++)
             {
@@ -54,7 +54,6 @@ namespace ConcurrentTrainSimulation
                 
                 lock (r.LockObj)
                 {
-                    ;
                     r.U_IsBusy = true;
                     Phase = Phases.Start;
                     Console.WriteLine($"A {Id} vanat éppen a {r.U} állomásról indul!");
@@ -64,18 +63,45 @@ namespace ConcurrentTrainSimulation
 
                 foreach (Paths p in r.Path)
                 {
-                    //lock (p.LockObj)
-                    //    Monitor.Wait(p.LockObj);
-
                     lock (p.LockObj)
                     {
                         Console.WriteLine($"A {Id} vanat éppen a {p.Path} állomáson van");
                         p.IsBusy = true;
-                        Thread.Sleep(10);
+
+                        IEnumerable<Packer> FreePackers;
+                        
+                        lock (Packer.PackerLock)
+                        {
+                            FreePackers = packers.Where(x => x.Status != Packer.PackerStatus.Work);
+                            if (FreePackers.Count() > 0)
+                            {
+                                foreach (Packer packer in FreePackers)
+                                {
+                                    packer.Status = Packer.PackerStatus.Work;
+                                }
+                            }
+                        }
+
+                        foreach (var fitting in fittings)
+                        {
+                            foreach (var item in fitting)
+                            {
+                                item.IsFilled = true;
+                            }
+                        }
+
+                        //fittings.ForEach((x) => {
+                        //x.ToList().ForEach(y => {
+                        //    Console.WriteLine(y.W);
+                        //});
+
+                        while (fittings.ForEach((x) => x.ToList().ForEach(y => y.IsFilled)))
+                        { 
+                            
+                        }
+
                         p.IsBusy = false;
                     }
-
-                    
                 }
 
                 while (r.V_IsBusy)
@@ -100,7 +126,9 @@ namespace ConcurrentTrainSimulation
 
         private void AddFitting()
         {
-            fittings.AddRange(Enumerable.Range(1, 4).Select(x => new ConcurrentStack<int>()));
+
+
+            fittings.AddRange(Enumerable.Range(1, 4).Select(x => new ConcurrentStack<Fitting>())); ;
         }
 
         private void FillTimetable()
@@ -110,5 +138,15 @@ namespace ConcurrentTrainSimulation
             Timetable.Add(new Tuple<int, int>(1, 7));
             //Timetable.AddRange(Enumerable.Range(1, 3).Select(x => new Tuple<int, int>(rnd.Next(1, 9), rnd.Next(1, 9))));
         }
+
+    }
+
+    public class Fitting
+    {
+        public int W { get; set; } = WArray[rnd.Next(0, 4)];
+        
+        private static Random rnd = new Random();
+        private static int[] WArray = new int[] { 50, 80, 100 };
+        public bool IsFilled { get; set; }
     }
 }

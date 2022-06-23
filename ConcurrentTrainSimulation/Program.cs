@@ -10,8 +10,16 @@
         internal class Program
         {
             static void Main(string[] args)
-            {              
-                TrafficManager manager = new TrafficManager();
+            {
+
+            int[] val = { 60, 100, 120 };
+            int[] wt = { 10, 20, 30 };
+            int W = 50;
+            int n = val.Length;
+            Knapsack k = new Knapsack();  
+            Console.Write(k.knapSackDynamic(W, wt, val, n));
+
+            TrafficManager manager = new TrafficManager();
                 manager.GetAllShortestPath();
                 var a = manager.Map_FloydWarshall;
             ;
